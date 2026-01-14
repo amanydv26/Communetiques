@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useCreateInquiry } from "@/hooks/use-inquiries";
 import { Loader2, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -16,8 +16,8 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export function ContactForm({ className }: { className?: string }) {
-  const { mutate, isPending } = useCreateInquiry();
-  
+  const [isPending, setIsPending] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -34,10 +34,15 @@ export function ContactForm({ className }: { className?: string }) {
     }
   });
 
-  const onSubmit = (data: FormData) => {
-    mutate(data, {
-      onSuccess: () => reset()
-    });
+  const onSubmit = async (data: FormData) => {
+    setIsPending(true);
+
+    // Simulate async submit (no backend)
+    setTimeout(() => {
+      console.log("Form data:", data);
+      reset();
+      setIsPending(false);
+    }, 1000);
   };
 
   return (
@@ -56,7 +61,7 @@ export function ContactForm({ className }: { className?: string }) {
             />
             {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
           </div>
-          
+
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-700">Email Address</label>
             <input
@@ -78,7 +83,7 @@ export function ContactForm({ className }: { className?: string }) {
             />
             {errors.phone && <p className="text-xs text-red-500">{errors.phone.message}</p>}
           </div>
-          
+
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-700">Subject</label>
             <select
