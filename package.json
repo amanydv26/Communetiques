@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
- "scripts": {
-  "client": "vite",
-  "dev": "concurrently  \"npm run client\"",
-  "start": "cross-env NODE_ENV=production node dist/index.cjs",
-  "check": "tsc",
-  "db:push": "drizzle-kit push"
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "check": "tsc"
 },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
