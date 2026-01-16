@@ -28,7 +28,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
                <div className="w-72 h-10rounded-lg overflow-hidden  p-1 ">
                 <img
-                  src='logo.png'
+                  src='Logo2white.png'
                   alt="logo"
                   className="w-full h-full object-contain"
                 />
