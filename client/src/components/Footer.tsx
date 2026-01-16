@@ -1,6 +1,23 @@
 import { Link } from "wouter";
-import { Facebook, Twitter, Youtube, Linkedin, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
-
+import { Facebook, Twitter, Youtube, Chrome, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+const socialLinks = [
+  {
+    icon: Facebook,
+    url: "https://www.facebook.com/Communetiques",
+  },
+  {
+    icon: Twitter,
+    url: "https://www.twitter.com/Communetiques",
+  },
+ {
+  icon: Chrome,
+  url: "https://g.page/r/CYT9EIlSpCi1EAE",
+},
+  {
+    icon: Youtube,
+    url: "https://www.youtube.com/channel/UC5y42hUPRmVccZKsPy1f0Qw",
+  },
+]
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
@@ -9,9 +26,9 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-               <div className="w-20 h-10rounded-lg overflow-hidden shadow-lg p-1 group-hover:scale-105 transition-transform">
+               <div className="w-72 h-10rounded-lg overflow-hidden  p-1 ">
     <img
-      src=''
+      src='logo-2.png'
       alt="logo"
       className="w-full h-full object-contain"
     
@@ -23,10 +40,12 @@ export function Footer() {
               Delivering excellence since our inception.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Youtube].map((Icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
+              {socialLinks.map(({ icon: Icon, url }, i) => (
+                <a
+                  key={i}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   <Icon className="w-5 h-5" />
@@ -84,14 +103,14 @@ export function Footer() {
               <li className="flex items-start gap-3 text-secondary-foreground/70">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-1" />
                 <span>
-                  123 Tech Park, Andheri East,<br />
-                  Mumbai, Maharashtra 400093,<br />
+                B-9,KP Aurum,Marol Maroshi Road,
+                  Andheri (E), Mumbai - 400059<br />
                   India
                 </span>
               </li>
               <li className="flex items-center gap-3 text-secondary-foreground/70">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+91 22 1234 5678</span>
+                <span>+91 22 2920 3610</span>
               </li>
               <li className="flex items-center gap-3 text-secondary-foreground/70">
                 <Mail className="w-5 h-5 text-primary shrink-0" />

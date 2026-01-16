@@ -52,11 +52,9 @@ export default function Contact() {
                 <h3 className="text-xl font-bold text-gray-900">Our Office</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                123 Tech Park, Andheri East,
-                <br />
-                Mumbai, Maharashtra 400093,
-                <br />
-                India
+                 B-9,KP Aurum,Marol Maroshi Road,
+                  Andheri (E), Mumbai - 400059<br />
+                  India
               </p>
             </div>
 
@@ -69,7 +67,7 @@ export default function Contact() {
                   Phone & Email
                 </h3>
               </div>
-              <p className="text-gray-600 mb-2">+91 22 1234 5678</p>
+              <p className="text-gray-600 mb-2"> +91 22 2920 3610</p>
               <p className="text-primary font-medium">info@communetiques.com</p>
             </div>
 

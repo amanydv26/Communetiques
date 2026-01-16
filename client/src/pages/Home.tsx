@@ -1,5 +1,5 @@
 import { HeroSlider } from "@/components/HeroSlider";
-import { Shield, Tv, Users, Headset, ChevronRight, Activity, Globe, Lock } from "lucide-react";
+import { Shield, Tv, Users, Headset, ChevronRight, Activity, Globe, Lock, Wifi, Server } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,9 +33,9 @@ const FEATURES = [
 ];
 
 const INDUSTRIES = [
-  { name: "Airports & Metro", icon: Globe, img: "https://images.unsplash.com/photo-1542296332-2e44a996aa0d?auto=format&fit=crop&q=80&w=800" },
+  { name: "Airports & Metro", icon: Globe, img: "Airport.jpg" },
   { name: "Hospitals", icon: Activity, img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" },
-  { name: "Banks & Finance", icon: Lock, img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800" },
+  { name: "Banks & Finance", icon: Lock, img: "bank.jpg" },
   { name: "Railways", icon: Users, img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80&w=800" }
 ];
 
@@ -164,7 +164,8 @@ export default function Home() {
   {/* IPTV */}
   <SwiperSlide>
     <ServiceCard
-      img="https://pixabay.com/get/g6135f50d9a99be3d3bcdbd03522813097eb668022bf08c924323b838402f6932d8280a64868f60c6a9855b85a1494072_1280.jpg"
+      // img="https://pixabay.com/get/g6135f50d9a99be3d3bcdbd03522813097eb668022bf08c924323b838402f6932d8280a64868f60c6a9855b85a1494072_1280.jpg"
+      img="/IPTV & OTT.jpg"
       icon={<Tv className="w-10 h-10 text-primary mb-4" />}
       title="IPTV & OTT"
       desc="End-to-end streaming infrastructure for media companies."
@@ -174,7 +175,8 @@ export default function Home() {
   {/* Security */}
   <SwiperSlide>
     <ServiceCard
-      img="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800"
+      // img="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800"
+      img="Security.jpg"
       icon={<Shield className="w-10 h-10 text-primary mb-4" />}
       title="Security Systems"
       desc="Advanced surveillance including CCTV, drones, and access control."
@@ -184,7 +186,8 @@ export default function Home() {
   {/* Digital Signage */}
   <SwiperSlide>
     <ServiceCard
-      img="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+      // img="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+      img="Digital_Signage.jpg"
       icon={<Activity className="w-10 h-10 text-primary mb-4" />}
       title="Digital Signage"
       desc="Interactive display solutions for retail and corporate spaces."
@@ -192,10 +195,26 @@ export default function Home() {
   </SwiperSlide>
   <SwiperSlide>
   <ServiceCard
-    img="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
-    icon={<Users className="w-10 h-10 text-primary mb-4" />}
-    title="Logistics & Transport"
-    desc="Smart logistics solutions for tracking and supply chain optimization."
+    img="Access Control.jpg"
+    icon={<Lock className="w-10 h-10 text-primary mb-4" />}
+    title="Access Control"
+    desc="Smart entry management systems for restricted areas and workforce tracking."
+  />
+</SwiperSlide>
+  <SwiperSlide>
+  <ServiceCard
+    img="network.jpg"
+    icon={<Wifi className="w-10 h-10 text-primary mb-4" />}
+    title="Networking Infrastructure"
+    desc="Robust structured cabling and wireless networks ensuring 100% connectivity."
+  />
+</SwiperSlide>
+  <SwiperSlide>
+  <ServiceCard
+    img="Hospitality.jpg"
+    icon={<Server className="w-10 h-10 text-primary mb-4" />}
+    title="Hospitality TV"
+    desc="Specialized in-room entertainment solutions for hotels and luxury residences."
   />
 </SwiperSlide>
 </Swiper>

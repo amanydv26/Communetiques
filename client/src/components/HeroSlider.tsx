@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import React from "react";
 
 const SLIDES = [
   {
@@ -32,8 +33,18 @@ const SLIDES = [
 ];
 
 export function HeroSlider() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 6000 })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
+const [activeIndex, setActiveIndex] = React.useState(0);
+React.useEffect(() => {
+  if (!emblaApi) return;
 
+  const onSelect = () => {
+    setActiveIndex(emblaApi.selectedScrollSnap());
+  };
+
+  emblaApi.on("select", onSelect);
+  onSelect();
+}, [emblaApi]);
   return (
     <div className="overflow-hidden bg-secondary relative h-[600px] md:h-[700px]" ref={emblaRef}>
       <div className="flex h-full">
@@ -98,6 +109,21 @@ export function HeroSlider() {
           </div>
         ))}
       </div>
+      {/* Simple Dots */}
+<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+  {SLIDES.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => emblaApi?.scrollTo(index)}
+      className={`h-3 rounded-full transition-all duration-300 ${
+        activeIndex === index
+          ? "w-8 bg-primary"
+          : "w-3 bg-white/40 hover:bg-white/70"
+      }`}
+    />
+  ))}
+</div>
+
       
       {/* Decorative Bottom Curve */}
       {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">

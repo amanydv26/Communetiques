@@ -30,11 +30,11 @@ export function Navigation() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Bar - Hidden on mobile for cleaner look, or keep if critical */}
-      <div className="bg-secondary text-secondary-foreground py-2 px-4 text-xs font-medium hidden md:block">
+      {/* <div className="bg-secondary text-secondary-foreground py-2 px-4 text-xs font-medium hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex gap-6 ml-9">
             <span className="flex items-center gap-2">
-              <Phone className="w-3 h-3 text-primary" /> +91 22 1234 5678
+              <Phone className="w-3 h-3 text-primary" /> +91 22 2920 3610
             </span>
             <span className="flex items-center gap-2">
               <Mail className="w-3 h-3 text-primary" /> info@communetiques.com
@@ -44,7 +44,23 @@ export function Navigation() {
             <MapPin className="w-3 h-3" /> Mumbai, India
           </div>
         </div>
-      </div>
+      </div> */}
+      <div className="bg-secondary text-secondary-foreground py-2 text-xs font-medium hidden md:block">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <div className="flex gap-6">
+      <span className="flex items-center gap-2">
+        <Phone className="w-3 h-3 text-primary" /> +91 22 2920 3610
+      </span>
+      <span className="flex items-center gap-2">
+        <Mail className="w-3 h-3 text-primary" /> info@communetiques.com
+      </span>
+    </div>
+    <div className="flex items-center gap-2 opacity-80">
+      <MapPin className="w-3 h-3" /> Mumbai, India
+    </div>
+  </div>
+</div>
+
 
       {/* Main Navbar */}
       <div
@@ -55,18 +71,17 @@ export function Navigation() {
             : "bg-white/90 backdrop-blur-sm py-5 md:bg-white md:py-6"
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 ">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-               <div className="w-20 h-10rounded-lg overflow-hidden shadow-lg p-1 group-hover:scale-105 transition-transform">
-    <img
-      src=''
-      alt="logo"
-      className="w-full h-full object-contain"
-    
-    />
-  </div>
+            <Link href="/" className="flex items-center  gap-2 group -ml-10 ">
+               <div className="rounded-lg ">
+                <img
+                  src='/logo.png'
+                  alt="logo"
+                  className="w-72 h-12 items-start object-contain bg-transparent"
+                />
+              </div>
             </Link>
 
             {/* Desktop Nav */}
