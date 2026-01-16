@@ -2,44 +2,14 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-// const CATEGORIES = [
-//   {
-//     id: "stb",
-//     name: "Set Top Boxes",
-//     description: "High-performance Android and Linux STBs supporting 4K HDR.",
-//     image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800",
-//     items: ["Android TV Box", "Hybrid DVB-C/S2 Box", "IPTV Stick"]
-//   },
-//   {
-//     id: "headend",
-//     name: "Headend Equipment",
-//     description: "Professional encoders, transcoders, and IRDs for broadcast.",
-//     image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800",
-//     items: ["4K Encoders", "Statmux", "Satellite Receivers"]
-//   },
-//   {
-//     id: "cctv",
-//     name: "Surveillance Cameras",
-//     description: "AI-powered cameras with night vision and facial recognition.",
-//     image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800",
-//     items: ["PTZ Cameras", "Dome Cameras", "Bullet Cameras"]
-//   },
-//   {
-//     id: "drone",
-//     name: "Security Drones",
-//     description: "Autonomous drones for perimeter security and inspection.",
-//     image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=800",
-//     items: ["Surveillance Drones", "Tethered Drones", "Anti-Drone Systems"]
-//   }
-// ];
+
 const CATEGORIES = [
   {
     id: "stb",
     name: "Set Top Boxes & Media Players",
     description:
       "We supply Android (AOSP & ATV), Linux, and Windows-based media players for IPTV and OTT platforms in multiple CPU and memory configurations. All devices are BIS certified and built for high performance broadcasting.",
-    image:
-      "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800",
+    image:"/SetTopBoxMediaPlayers.jpg",
     items: [
       "Android TV Boxes",
       "Linux Media Players",
@@ -53,8 +23,7 @@ const CATEGORIES = [
     name: "Digital Headends",
     description:
       "Authorized distributors of GSS – Grundig Satellite Systems (Germany) providing professional digital headend solutions for IPTV, OTT and Cable TV networks, along with cost-effective broadcasting equipment.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800",
+    image:"/DigitalHeadends.jpg",
     items: [
       "IPTV Headend Systems",
       "OTT Broadcasting Platforms",
@@ -68,8 +37,7 @@ const CATEGORIES = [
     name: "HD Commercial Displays",
     description:
       "High-definition commercial displays from global OEM brands for digital signage, corporate communication, broadcast information systems and large-format installations.",
-    image:
-      "https://images.unsplash.com/photo-1581091012184-7c54ab98fae2?auto=format&fit=crop&q=80&w=800",
+    image:"/HDCommercialDisplays.jpg",
     items: [
       "Commercial HD Displays",
       "Indoor LED Displays",
@@ -83,8 +51,7 @@ const CATEGORIES = [
     name: "Video Walls & Touch Screen Kiosks",
     description:
       "End-to-end hardware and software solutions for video walls and interactive kiosks used in advertising, navigation, self-service and digital information systems.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+    image: "/VideoWalls&TouchScreenKiosks.jpg",
     items: [
       "Video Wall Systems",
       "Touch Screen Kiosks",
@@ -98,8 +65,7 @@ const CATEGORIES = [
     name: "Digital Security Scanners",
     description:
       "Advanced security scanning systems for high-risk and high-traffic locations including airports, banks, government facilities and border checkpoints.",
-    image:
-      "https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&q=80&w=800",
+    image:"/DigitalSecurityScanners.jpg",
     items: [
       "X-Ray Luggage Scanners",
       "E-Gate Security Systems",
@@ -113,8 +79,7 @@ const CATEGORIES = [
     name: "Iris Detection & Biometric Access",
     description:
       "High-accuracy biometric authentication solutions designed for mission-critical security and enterprise-grade access control environments.",
-    image:
-      "https://images.unsplash.com/photo-1581091870627-3b1b6b5d2f24?auto=format&fit=crop&q=80&w=800",
+    image:"/IrisDetection&BiometricAccess.jpg",
     items: [
       "Iris Recognition Devices",
       "Biometric Access Controllers",
@@ -130,7 +95,7 @@ export default function Products() {
 {/* Hero Banner */}
 <div className="relative h-[280px] md:h-[360px] overflow-hidden mb-20 shadow-lg">
   <img
-    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600"
+    src="/OurProducts_Banner.jpg"
     alt="Product Catalog Banner"
     className="absolute inset-0 w-full h-full object-cover"
   />

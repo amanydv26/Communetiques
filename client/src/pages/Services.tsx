@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Tv, Shield, Activity, Wifi, Lock, Server } from "lucide-react";
 import { Link } from "wouter";
-
+import Banner from "../../public/Our Services_Banner.jpg"
 const SERVICES = [
   {
     icon: Tv,
@@ -47,7 +47,7 @@ export default function Services() {
       {/* Hero Banner */}
 <div className="relative h-[280px] md:h-[360px]  overflow-hidden mb-20 shadow-lg">
   <img
-    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600"
+    src="/Our_Services_Banner.jpg"
     alt="Services Banner"
     className="absolute inset-0 w-full h-full object-cover"
   />
