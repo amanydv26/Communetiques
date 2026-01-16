@@ -27,13 +27,12 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
                <div className="w-72 h-10rounded-lg overflow-hidden  p-1 ">
-    <img
-      src='logo-2.png'
-      alt="logo"
-      className="w-full h-full object-contain"
-    
-    />
-  </div>
+                <img
+                  src='logo.png'
+                  alt="logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
             <p className="text-secondary-foreground/70 leading-relaxed">
               Leading provider of IPTV, OTT, and advanced security solutions for enterprises. 
@@ -122,7 +121,17 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/50">
           <p>© {new Date().getFullYear()} Communetiques. All rights reserved.</p>
-          <p>Designed with excellence.</p>
+         <p className="text-sm text-white/70">
+  Designed by{" "}
+  <a
+    href="https://ackrolix.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-white hover:text-primary transition-colors"
+  >
+    Ackrolix
+  </a>
+</p>
         </div>
       </div>
     </footer>
